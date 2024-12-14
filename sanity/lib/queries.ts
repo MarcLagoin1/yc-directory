@@ -12,3 +12,13 @@ export const STARTUP_DETAIL_QUERY = defineQuery(`*[_type == "startup" && _id == 
     _id, name, image, bio
   }, views, description, category, image, pitch,
 }`);
+
+export const AUTHOR_BY_GITHUB_USER_QUERY = defineQuery(`*[_type == "author" && id == $id][0]{
+  _id,
+  id,
+  name,
+  username,
+  email,
+  image,
+  bio,
+  }`);
